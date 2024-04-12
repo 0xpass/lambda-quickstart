@@ -1,6 +1,6 @@
 # Passport-Quickstart
 
-This project is a demonstration of integrating the Passport SDK for user registration, authentication, and message signing within a Next.js application. It showcases how to set up a basic authentication flow using Webauthn with `@0xpass/passport` and `@0xpass/webauthn-signer`, and interactions with [Passport Lambda's](https://docs.0xpass.io/components/lambda)
+This project is a demonstration of integrating the Passport SDK for user registration, authentication, and Passport Lambda's within a Next.js application. It showcases how to set up a basic authentication flow using Webauthn with `@0xpass/passport` and `@0xpass/webauthn-signer`, and interactions with [Passport Lambda's](https://docs.0xpass.io/components/lambda)
 
 ## Getting Started
 
@@ -25,7 +25,7 @@ This command installs all dependencies required for the project, including the P
 - yarn: `yarn run dev`
 - pnpm: `pnpm run dev`
 
-Open http://localhost:3000 in your browser to see the application.
+Open http://localhost:3000 in your browser to see the application. 
 
 ## Editing the Project
 
