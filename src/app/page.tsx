@@ -1,6 +1,5 @@
 "use client";
 import { Fragment, useState } from "react";
-import { TESTNET_RSA_PUBLIC_KEY } from "@0xpass/passport";
 import { usePassport } from "./hooks/usePassport";
 import dynamic from "next/dynamic";
 
@@ -31,10 +30,7 @@ export default function Page() {
     userDisplayName: username,
   };
 
-  const { passport } = usePassport({
-    ENCLAVE_PUBLIC_KEY: TESTNET_RSA_PUBLIC_KEY,
-    scope_id: "07907e39-63c6-4b0b-bca8-377d26445172",
-  });
+  const { passport } = usePassport("07907e39-63c6-4b0b-bca8-377d26445172");
 
   const lambdaConfig = {
     authorization: {
@@ -53,6 +49,7 @@ export default function Page() {
         substitution: true,
       },
     ],
+    triggers: [],
     actions: {
       type: "personal_sign" as const,
       check: "",
