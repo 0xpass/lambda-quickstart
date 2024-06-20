@@ -49,7 +49,11 @@ export default function Page() {
         substitution: true,
       },
     ],
-    triggers: [],
+    triggers: [
+      {
+        type: "hook",
+      },
+    ],
     actions: {
       type: "personal_sign" as const,
       check: "",
@@ -90,6 +94,7 @@ export default function Page() {
   }
 
   async function executeLambda() {
+    await passport.setupEncryption();
     setExecuteLambdaLoading(true);
     try {
       const params = {
