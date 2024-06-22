@@ -51,7 +51,7 @@ export default function Page() {
     ],
     triggers: [
       {
-        type: "hook",
+        type: "hook" as "hook",
       },
     ],
     actions: {
